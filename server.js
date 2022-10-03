@@ -2,10 +2,13 @@ const express = require("express");
 const path = require("path");
 let db = require("./db/db.json");
 const fs = require("fs");
-const PORT = process.env.PORT || 3001;
+const dotenv = require("dotenv");
 const uuid = require("./helpers/uuid");
 
 const app = express();
+
+if (app.get('env') !== 'production') dotenv.config();
+const PORT = process.env.PORT || 3001;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -45,5 +48,5 @@ app.get("*", (req, res) =>
 );
 
 app.listen(PORT, () =>
-  console.log("App listening at http://localhost:${PORT}")
+  console.log(`App listening at http://localhost:${PORT}`)
 );
