@@ -8,9 +8,12 @@ This application starts with a note taking landing page with a link to a notes p
 
 Screenshot of application
 
+![](public/assets/Screenshot2.PNG)
 ![](public/assets/Screenshot.PNG)
 
+Link to application
 
+https://note-taker-application-ag.herokuapp.com/
 
 # License
 
